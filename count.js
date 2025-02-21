@@ -14,14 +14,17 @@ rounds.addEventListener('change', function (e){
 })
 
 firstPlayer.addEventListener('click', function (e) {
-    console.log('CLICK')
     player1Score += 1
+    let player = 1
     h1.textContent = `${player1Score} to ${player2Score}`
+    winner(player1Score, roundsValue, player)
 })
 
 secondPlayer.addEventListener('click', function (e) {
-    player2Score +=1
+    player2Score += 1
+    let player = 2
      h1.textContent = `${player1Score} to ${player2Score}`
+     winner(player2Score, roundsValue, player)
 })
 
 zeroed.addEventListener('click', function (e) {
@@ -29,3 +32,8 @@ zeroed.addEventListener('click', function (e) {
     player1Score = 0;
     player2Score = 0;
 })
+
+const winner = (playerscore, roundnumber,player) => {
+    if(playerscore === roundnumber) {
+        console.log(`Player ${player} is the winner!`)
+}}
