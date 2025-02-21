@@ -25,5 +25,7 @@ secondPlayer.addEventListener('click', function (e) {
 })
 
 zeroed.addEventListener('click', function (e) {
-    h1.textContent = '0 to 0'
+    h1.textContent = '0 to 0';
+    player1Score = 0;
+    player2Score = 0;
 })
