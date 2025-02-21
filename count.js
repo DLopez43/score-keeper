@@ -16,3 +16,7 @@ secondPlayer.addEventListener('click', function (e) {
     player2Score +=1
      h1.textContent = `${player1Score} to ${player2Score}`
 })
+
+zeroed.addEventListener('click', function (e) {
+    h1.textContent = '0 to 0'
+})
