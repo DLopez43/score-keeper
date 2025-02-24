@@ -8,6 +8,8 @@ let rounds = document.querySelector('#Maxrounds');
 let selected = rounds.options[rounds.selectedIndex];
 let roundsValue = selected.value;
 let h1 = document.querySelector('h1');
+let playerOneSpan = document.getElementById('first')
+let playerTwoSpan = document.getElementById('second')
 
 rounds.addEventListener('change', function (e){
   roundsValue = Number(this.value);
