@@ -36,10 +36,13 @@ zeroed.addEventListener('click', function (e) {
     firstPlayer.disabled = false;
     secondPlayer.disabled = false;
     rounds.value = 1
-
 })
 
 const winner = (playerscore, roundnumber,player) => {
     if(playerscore === roundnumber) {
         console.log(`Player ${player} is the winner!`)
+        firstPlayer.disabled = true;
+        secondPlayer.disabled = true;
+        firstPlayer.style.backgroundColor = 'grey';
+        secondPlayer.style.backgroundColor = 'grey';
 }}
