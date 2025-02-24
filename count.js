@@ -15,17 +15,17 @@ rounds.addEventListener('change', function (e){
   roundsValue = Number(this.value);
 })
 
-firstPlayer.addEventListener('click', function (e) {
-    player1Score += 1
-    let player = 1
-    h1.textContent = `${player1Score} to ${player2Score}`
+firstPlayerBtn.addEventListener('click', function (e) {
+    player1Score += 1;
+    let player = 1;
+    playerOneSpan.textContent = player1Score
     winner(player1Score, roundsValue, player)
 })
 
-secondPlayer.addEventListener('click', function (e) {
-    player2Score += 1
-    let player = 2
-     h1.textContent = `${player1Score} to ${player2Score}`
+secondPlayerBtn.addEventListener('click', function (e) {
+    player2Score += 1;
+    let player = 2;
+    playerTwoSpan.textContent = player2Score
      winner(player2Score, roundsValue, player)
 })
 
