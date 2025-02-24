@@ -1,8 +1,8 @@
 let player1Score = 0
 let player2Score = 0
 
-let firstPlayer = document.querySelector('#player1');
-let secondPlayer = document.querySelector('#player2');
+let firstPlayerBtn = document.querySelector('#player1');
+let secondPlayerBtn = document.querySelector('#player2');
 let zeroed = document.querySelector('#reset');
 let rounds = document.querySelector('#Maxrounds');
 let selected = rounds.options[rounds.selectedIndex];
