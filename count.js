@@ -43,18 +43,7 @@ function reset () {
     rounds.value = 'Select Option';
 }
 
-zeroed.addEventListener('click', reset
-// {
-    // h1.textContent = '0 to 0';
-    // player1Score = 0;
-    // player2Score = 0;
-    // firstPlayerBtn.style.backgroundColor = '#5bc0de';
-    // secondPlayerBtn.style.backgroundColor = '#428bca';
-    // firstPlayerBtn.disabled = false;
-    // secondPlayerBtn.disabled = false;
-    // rounds.value = 5
-// }
-)
+zeroed.addEventListener('click', reset)
 
 const winner = (playerscore, roundnumber,player) => {
     if(playerscore === roundnumber) {
