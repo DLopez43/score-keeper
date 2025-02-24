@@ -29,8 +29,11 @@ secondPlayer.addEventListener('click', function (e) {
      winner(player2Score, roundsValue, player)
 })
 
-zeroed.addEventListener('click', function (e) {
-    h1.textContent = '0 to 0';
+function reset () {
+    playerOneSpan.textContent = 0;
+    playerTwoSpan.textContent = 0;
+    playerOneSpan.style.color = 'black';
+    playerTwoSpan.style.color = 'black';
     player1Score = 0;
     player2Score = 0;
     firstPlayer.style.backgroundColor = '#5bc0de';
