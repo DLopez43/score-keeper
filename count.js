@@ -59,8 +59,18 @@ zeroed.addEventListener('click', reset
 const winner = (playerscore, roundnumber,player) => {
     if(playerscore === roundnumber) {
         console.log(`Player ${player} is the winner!`)
-        firstPlayer.disabled = true;
-        secondPlayer.disabled = true;
-        firstPlayer.style.backgroundColor = 'grey';
-        secondPlayer.style.backgroundColor = 'grey';
+        firstPlayerBtn.disabled = true;
+        secondPlayerBtn.disabled = true;
+        firstPlayerBtn.style.backgroundColor = 'grey';
+        secondPlayerBtn.style.backgroundColor = 'grey';
+        if (player1Score === roundsValue) {
+            playerOneSpan.style.color = 'green';
+        } else{
+            playerOneSpan.style.color = 'red';
+        }
+        if (player2Score === roundsValue) {
+            playerTwoSpan.style.color = 'green';
+        } else{
+            playerTwoSpan.style.color = 'red';
+        }
 }}
