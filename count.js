@@ -11,11 +11,6 @@ const player2 = {
     display: document.getElementById('second'),
 }
 
-// let player1Score = 0
-let player2Score = 0
-
-// let firstPlayerBtn = document.querySelector('#player1');
-// let secondPlayerBtn = document.querySelector('#player2');
 let zeroed = document.querySelector('#resetbtn');
 let rounds = document.querySelector('#Maxrounds');
 let selected = rounds.options[rounds.selectedIndex];
