@@ -1,15 +1,27 @@
-let player1Score = 0
+// saved user data into object literals
+const player1 = {
+    score: 0,
+    button: document.querySelector('#player1btn'),
+    display: document.getElementById('first'),
+}
+
+const player2 = {
+    score: 0,
+    button: document.querySelector('#player2btn'),
+    display: document.getElementById('second'),
+}
+
+// let player1Score = 0
 let player2Score = 0
 
-let firstPlayerBtn = document.querySelector('#player1');
-let secondPlayerBtn = document.querySelector('#player2');
-let zeroed = document.querySelector('#reset');
+// let firstPlayerBtn = document.querySelector('#player1');
+// let secondPlayerBtn = document.querySelector('#player2');
+let zeroed = document.querySelector('#resetbtn');
 let rounds = document.querySelector('#Maxrounds');
 let selected = rounds.options[rounds.selectedIndex];
 let roundsValue = selected.value;
-let h1 = document.querySelector('h1');
-let playerOneSpan = document.getElementById('first')
-let playerTwoSpan = document.getElementById('second')
+// let playerOneSpan = document.getElementById('first')
+// let playerTwoSpan = document.getElementById('second')
 
 rounds.addEventListener('change', function (e){
   roundsValue = Number(this.value);
