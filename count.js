@@ -46,17 +46,14 @@ player2.button.addEventListener('click', function () {
 })
 
 function reset () {
-    playerOneSpan.textContent = 0;
-    playerTwoSpan.textContent = 0;
-    playerOneSpan.style.color = 'black';
-    playerTwoSpan.style.color = 'black';
-    player1Score = 0;
-    player2Score = 0;
-    firstPlayerBtn.style.backgroundColor = '#5bc0de';
-    secondPlayerBtn.style.backgroundColor = '#428bca';
-    firstPlayerBtn.disabled = false;
-    secondPlayerBtn.disabled = false;
-    rounds.value = 'Select Option';
+    gameOver = false;
+    for(let p of [player1,player2]) {
+    p.score = 0;
+    p.display.textContent = 0;
+    p.display.classList.remove('has-text-success', 'has-text-danger');
+    p.button.disabled = false;
+    rounds= 'Select Option';
+    }
 }
 
 zeroed.addEventListener('click', reset)
