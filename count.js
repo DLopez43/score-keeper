@@ -19,7 +19,7 @@ let roundsValue = selected.value;
 // let playerTwoSpan = document.getElementById('second')
 
 rounds.addEventListener('change', function (e){
-  roundsValue = Number(this.value);
+  winningValue = Number(this.value);
 })
 
 firstPlayerBtn.addEventListener('click', function (e) {
