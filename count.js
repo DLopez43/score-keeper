@@ -14,26 +14,35 @@ const player2 = {
 let zeroed = document.querySelector('#resetbtn');
 let rounds = document.querySelector('#Maxrounds');
 let selected = rounds.options[rounds.selectedIndex];
-let roundsValue = selected.value;
-// let playerOneSpan = document.getElementById('first')
-// let playerTwoSpan = document.getElementById('second')
+let winningValue = selected.value;
+let gameOver= false;
+
+//  Created a function to update all user data
+function updateScores(player, opponent) {
+    if(!gameOver) {
+        player.score += 1;
+        if(player.score === winningValue){
+            gameOver = true;
+            player.display.classList.add('has-text-success');
+            opponent.display.classList.add('has-text-danger');
+            player.button.disabled = true;
+            opponent.button.disabled = true;
+        }
+        player.display.textContent = player.score;
+    }
+
+}
 
 rounds.addEventListener('change', function (e){
   winningValue = Number(this.value);
 })
 
-firstPlayerBtn.addEventListener('click', function (e) {
-    player1Score += 1;
-    let player = 1;
-    playerOneSpan.textContent = player1Score
-    winner(player1Score, roundsValue, player)
+player1.button.addEventListener('click', function () {
+    updateScores(player1, player2)
 })
 
-secondPlayerBtn.addEventListener('click', function (e) {
-    player2Score += 1;
-    let player = 2;
-    playerTwoSpan.textContent = player2Score
-     winner(player2Score, roundsValue, player)
+player2.button.addEventListener('click', function () {
+    updateScores(player2, player1)
 })
 
 function reset () {
